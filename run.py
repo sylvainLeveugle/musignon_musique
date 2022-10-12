@@ -1,7 +1,7 @@
 import streamlit as st
 from texts import *
 from choices import *
-from change_instruments import change_instruments, change_instruments_control
+from change_instruments import change_instruments
 
 st.title('Ecoute la musique de ton groupe de musignons')
 
@@ -37,16 +37,11 @@ with st.form(form_name):
 
     rythme_change_multiplicator = 1 - 0.1 * change_rythm
     if submitted:
-        if name_music == "pirate_caribeean":
-            new_name = change_instruments_control(name_music, instru1, instru2, instru3,
-                                                  change_rythm=rythme_change_multiplicator,
-                                                  change_notes=change_height)
-        else:
-            new_name = change_instruments(name_music, instru1, instru2, instru3,
-                                          change_rythm=rythme_change_multiplicator,
-                                          change_notes=change_height)
+        new_name = change_instruments(name_music, instru1, instru2, instru3,
+                                      change_rythm=rythme_change_multiplicator,
+                                      change_notes=change_height)
 
-        end_creation
+        END_CREATION
 try:
     with open(new_name, 'rb') as f:
         st.download_button(download, f, file_name=name_musique)  # Defaults to 'application/octet-stream'
