@@ -1,7 +1,7 @@
 import streamlit as st
 from texts import *
 from choices import *
-from change_instruments import change_instruments
+from change_instruments import change_instruments, change_instruments_control
 
 st.title('Ecoute la musique de ton groupe de musignons')
 
@@ -37,8 +37,14 @@ with st.form(form_name):
 
     rythme_change_multiplicator = 1 - 0.1 * change_rythm
     if submitted:
-        new_name = change_instruments(name_music, instru1, instru2, instru3, change_rythm=rythme_change_multiplicator,
-                                      change_notes=change_height)
+        if name_music == "pirate_caribeean":
+            new_name = change_instruments_control(name_music, instru1, instru2, instru3,
+                                                  change_rythm=rythme_change_multiplicator,
+                                                  change_notes=change_height)
+        else:
+            new_name = change_instruments(name_music, instru1, instru2, instru3,
+                                          change_rythm=rythme_change_multiplicator,
+                                          change_notes=change_height)
 
         end_creation
 try:
