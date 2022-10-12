@@ -31,12 +31,11 @@ with st.form(form_name):
     change_height = st.slider(
         change_height_text,
         min_note_change, max_note_change, 0)
-    change_height = 0
 
     # Every form must have a submit button.
     submitted = st.form_submit_button(submit_form)
 
-    rythme_change_multiplicator = 1 + 0.1 * change_rythm
+    rythme_change_multiplicator = 1 - 0.1 * change_rythm
     if submitted:
         new_name = change_instruments(name_music, instru1, instru2, instru3, change_rythm=rythme_change_multiplicator,
                                       change_notes=change_height)
