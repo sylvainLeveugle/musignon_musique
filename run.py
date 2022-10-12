@@ -41,7 +41,7 @@ with st.form(form_name):
                                       change_rythm=rythme_change_multiplicator,
                                       change_notes=change_height)
 
-        END_CREATION
+        end_creation
 try:
     with open(new_name, 'rb') as f:
         st.download_button(download, f, file_name=name_musique)  # Defaults to 'application/octet-stream'
