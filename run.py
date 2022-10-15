@@ -3,7 +3,7 @@ from texts import *
 from choices import *
 from change_instruments import change_instruments
 
-st.title('Ecoute la musique de ton groupe de musignons')
+st.title(titre)
 
 with st.form(form_name):
     st.write(text_choice)
