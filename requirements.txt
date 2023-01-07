@@ -1,2 +1,6 @@
 mido==1.2.10
+midi2audio
+pretty_midi
+numpy
+scipy
 streamlit

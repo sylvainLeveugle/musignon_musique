@@ -1,9 +1,8 @@
 titre = "Ecoute la musique de ton groupe de musignons"
 
 select_music = "Quelle était la musique choisie ?"
-select_musignon_1 = "Quel est le premier instrument?"
-select_musignon_2 = "Quel est le deuxième instrument?"
-select_musignon_3 = "Quel est le troisième instrument?"
+input_code_musignon = "Rentrez à la suite et sans espace les lettre et chiffres de vos cartes musignons"
+
 change_rythm_text = "Effet musignon : change le rythme"
 change_height_text = "Effet musignon : change la hauteur"
 text_choice = "Choisissez vos musignons"
