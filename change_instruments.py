@@ -36,12 +36,23 @@ def get_infos(code_musignon):
             # Get the instrument, special cases for Y and Z
             if code == "Y8":
                 dict_infos["change_rythm"] = 0.7
+                dict_infos["name_instru{}".format(i + 1)] = "ChampDeForce"
+                dict_infos["name_family{}".format(i + 1)] = "Y8"
             elif code == "Y9":
                 dict_infos["change_rythm"] = 1.3
+                dict_infos["name_instru{}".format(i + 1)] = "ChampDeForce"
+                dict_infos["name_family{}".format(i + 1)] = "Y9"
             elif code == "Z8":
                 dict_infos["change_notes"] = -4
+                dict_infos["name_instru{}".format(i + 1)] = "ChampDeForce"
+                dict_infos["name_family{}".format(i + 1)] = "Z8"
             elif code == "Z9":
                 dict_infos["change_notes"] = 4
+                dict_infos["name_instru{}".format(i + 1)] = "ChampDeForce"
+                dict_infos["name_family{}".format(i + 1)] = "Z9"
+            elif code == "Y0":
+                dict_infos["name_instru{}".format(i + 1)] = "ChampDeForce"
+                dict_infos["name_family{}".format(i + 1)] = "Y0"
             else:
                 dict_infos["instru{}".format(i+1)] = dict_instruments[code[1]]["midi_number"]
                 dict_infos["name_instru{}".format(i+1)] = dict_instruments[code[1]]["name"]
