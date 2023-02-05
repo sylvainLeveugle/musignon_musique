@@ -73,17 +73,35 @@ def change_instruments(name_music_input, dict_infos):
                 if message.program == 0:
                     pass
                 elif message.program < 27:
-                    message.program = dict_infos["instru1"]
+                    if "program" in dir(message):
+                        message.program = dict_infos["instru1"]
+                    if "control" in dir(message):
+                        message.control = dict_infos["instru1"]
                 elif message.program < 41:
-                    message.program = dict_infos["instru2"]
+                    if "program" in dir(message):
+                        message.program = dict_infos["instru2"]
+                    if "control" in dir(message):
+                        message.control = dict_infos["instru2"]
                 elif message.program < 65:
-                    message.program = dict_infos["instru3"]
+                    if "program" in dir(message):
+                        message.program = dict_infos["instru3"]
+                    if "control" in dir(message):
+                        message.control = dict_infos["instru3"]
                 elif message.program < 73:
-                    message.program = dict_infos["instru4"]
+                    if "program" in dir(message):
+                        message.program = dict_infos["instru4"]
+                    if "control" in dir(message):
+                        message.control = dict_infos["instru4"]
                 elif message.program < 89:
-                    message.program = dict_infos["instru5"]
+                    if "program" in dir(message):
+                        message.program = dict_infos["instru5"]
+                    if "control" in dir(message):
+                        message.control = dict_infos["instru5"]
                 else:
-                    message.program = dict_infos["instru6"]
+                    if "program" in dir(message):
+                        message.program = dict_infos["instru6"]
+                    if "control" in dir(message):
+                        message.control = dict_infos["instru6"]
             except Exception:
                 pass
 
