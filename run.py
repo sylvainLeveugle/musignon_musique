@@ -8,6 +8,7 @@ from utils import add_background
 add_background('images/background.PNG')
 
 st.title(titre)
+
 with st.container():
     with st.form(form_name):
         st.write(text_choice)
